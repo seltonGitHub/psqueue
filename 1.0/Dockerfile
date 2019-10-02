@@ -2,6 +2,7 @@ FROM centos:7
 MAINTAINER selton "seltonzyf@outlook.com"
 RUN set -x && \
 yum install -y git && \
+git config --global http.postBuffer 20M && \
 mkdir -p /opt/psqueue && \
 git clone https://gitee.com/selton/PSQueueServer.git /opt/psqueue && \
 yum install -y java-1.8.0-openjdk-devel.x86_64 && \
